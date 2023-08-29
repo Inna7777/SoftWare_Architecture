@@ -1,5 +1,8 @@
 package lesson1.InMemoryModel;
 import lesson1.ModelElements.*;
+// класс ModelStore хранит объекты модели (models, scenes, flashes, cameras)
+// и реализует интерфейс IModelChanger.
+//  Метод notifyChange() используется для уведомления других объектов об изменении модели.
 
 public class ModelStore implements IModelChanger {
     public final PoligonalModel models;
@@ -7,7 +10,7 @@ public class ModelStore implements IModelChanger {
     public final Flash flashes;
     public final Camera cameras;
     private IModelChangeObserver changeObserver;
-
+    // Создается конструктор, который принимает объект IModelChangeObserver в качестве параметра.
     public  ModelStore(IModelChangeObserver changeObserver) {
         this.changeObserver = changeObserver;
         this.models = new PoligonalModel(new Poligon(new Point3D[]{new Point3D(0,0,0), new Point3D(0,0,0), new Point3D(0,0,0)}));
