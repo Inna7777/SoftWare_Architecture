@@ -14,4 +14,10 @@ public class Point3D {
         this.z = z;
     }
 
+    public void add(Point3D point){
+        this.x += point.x;
+        this.y += point.y;
+        this.z += point.z;
+    }
+
 }

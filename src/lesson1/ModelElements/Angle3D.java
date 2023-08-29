@@ -39,6 +39,13 @@ public class Angle3D {
             this.z = z;
         }
 
+        //  Метод add() добавлять к текущему углу  другой угол поворота.
+    public void add(Angle3D angle) {
+        this.x += angle.getX();
+        this.y += angle.getY();
+        this.z += angle.getZ();
+    }
+
 
     }
 
