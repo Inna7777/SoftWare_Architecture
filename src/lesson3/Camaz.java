@@ -12,6 +12,7 @@ public class Camaz extends Car implements ISweep, IGasStation, IWiping{
     public boolean isSweepingStreet(boolean isSweeping) {
         return true;
     }
+
     //метод протирки стекла имплементированный от интерфейса IWiping
     @Override
     public void wipingWindshield() {
@@ -24,6 +25,8 @@ public class Camaz extends Car implements ISweep, IGasStation, IWiping{
     public void isLight_on(boolean light_on) {
         System.out.println("Фары включены");
     }
+
+
     //метод перевозки груза унаследованый от родительского  класса
     @Override
     public void cargo() {
